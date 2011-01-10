@@ -2,23 +2,34 @@
 
 package br.com.sistemaescolar.controlador;
 
-import br.com.sistemaescolar.interfaces.BaseCrudMB;
+import br.com.sistemaescolar.modelo.Aluno;
+import br.com.sistemaescolar.service.AlunoService;
+import javax.enterprise.context.SessionScoped;
+import javax.faces.bean.ManagedBean;
 
-public class AlunoMB implements BaseCrudMB{
+@ManagedBean
+@SessionScoped
+public class AlunoMB {
 
-    @Override
-    public void cadastrar() {
-        
+    private Aluno aluno;
+    private AlunoService servico;
+
+    public void AlunoMB(){
+         setAluno(new Aluno());
+         servico = new AlunoService();
+    }
+    public String cadastrar() {
+        servico.cadastrarAluno(getAluno());
+        return "Sucesso";
     }
 
-    @Override
-    public void excluir() {
-        throw new UnsupportedOperationException("Not supported yet.");
+
+    public Aluno getAluno() {
+        return aluno;
     }
 
-    @Override
-    public void listar() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
     }
 
 }
