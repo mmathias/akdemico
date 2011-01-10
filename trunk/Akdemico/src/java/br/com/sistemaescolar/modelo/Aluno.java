@@ -11,7 +11,6 @@ import org.hibernate.annotations.Entity;
 
 @Entity
 @SequenceGenerator(name="sequencia", sequenceName="seq_usuario")
-
 public class Aluno implements Serializable{
 
     @Id
