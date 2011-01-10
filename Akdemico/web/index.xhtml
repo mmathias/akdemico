@@ -6,7 +6,13 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        Hello from Facelets
+        Aluno
+        <h:form>
+            <h:outputLabel>Nome: </h:outputLabel>
+            <h:inputText value="#{AlunoMB.aluno.nome}"></h:inputText>
+            <br/>
+            <h:commandButton action="#{AlunoMB.cadastrar}" value="Cadastrar"/>
+        </h:form>
     </h:body>
 </html>
 
