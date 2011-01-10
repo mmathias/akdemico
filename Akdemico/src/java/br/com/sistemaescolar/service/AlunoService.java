@@ -5,6 +5,7 @@
 
 package br.com.sistemaescolar.service;
 
+import br.com.sistemaescolar.dao.AlunoDAO;
 import br.com.sistemaescolar.modelo.Aluno;
 
 /**
@@ -12,10 +13,10 @@ import br.com.sistemaescolar.modelo.Aluno;
  * @author leosilvarj
  */
 public class AlunoService {
-
-     public boolean cadastrarAluno(Aluno aluno) {
-         Aluno umaluno = new Aluno();
-         umaluno.setNome("Leandro");
-         return true;
+    private AlunoDAO alunoDao = new AlunoDAO();
+    
+    
+    public void cadastrarAluno(Aluno aluno) {
+         alunoDao.cadastrarAluno(aluno);
     }
 }
