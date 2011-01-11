@@ -3,11 +3,12 @@ package br.com.sistemaescolar.modelo;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
-import org.hibernate.annotations.Entity;
+import javax.persistence.Temporal;
 
 @Entity
 @SequenceGenerator(name="sequencia", sequenceName="seq_usuario")
@@ -27,6 +28,7 @@ public class Aluno implements Serializable{
     private String bairro;
     private String cidade;
     private String telefone;
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date nascimento;
     private String email;
     private String responsavelFinanceiro;
