@@ -8,10 +8,6 @@ package br.com.sistemaescolar.service;
 import br.com.sistemaescolar.dao.AlunoDAO;
 import br.com.sistemaescolar.modelo.Aluno;
 
-/**
- *
- * @author leosilvarj
- */
 public class AlunoService {
     private AlunoDAO alunoDao = new AlunoDAO();
     
