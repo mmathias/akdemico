@@ -164,16 +164,10 @@ public class Aluno implements Serializable{
         this.responsavelFinanceiro = responsavelFinanceiro;
     }
 
-    /**
-     * @return the nascimento
-     */
     public Date getNascimento() {
         return nascimento;
     }
 
-    /**
-     * @param nascimento the nascimento to set
-     */
     public void setNascimento(Date nascimento) {
         this.nascimento = nascimento;
     }
