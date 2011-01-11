@@ -4,23 +4,15 @@ package br.com.sistemaescolar.controlador;
 
 import br.com.sistemaescolar.modelo.Aluno;
 import br.com.sistemaescolar.service.AlunoService;
-import javax.enterprise.context.SessionScoped;
-import javax.faces.bean.ManagedBean;
 
-@ManagedBean
-@SessionScoped
 public class AlunoMB {
 
-    private Aluno aluno;
-    private AlunoService servico;
+    private Aluno aluno = new Aluno();
+    private AlunoService servico = new AlunoService();
 
-    public void AlunoMB(){
-         setAluno(new Aluno());
-         servico = new AlunoService();
-    }
     public String cadastrar() {
         servico.cadastrarAluno(getAluno());
-        return "Sucesso";
+        return "sucesso";
     }
 
 
